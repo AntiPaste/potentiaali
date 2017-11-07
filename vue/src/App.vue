@@ -4,7 +4,7 @@
 
     <SkillSelection v-if="!phase" v-on:incrementPhase="incrementPhase" />
     <Questionnaire
-      v-if="phase"
+      v-else
       :phase="phase"
       :questions="questions"
       v-on:incrementPhase="incrementPhase"
