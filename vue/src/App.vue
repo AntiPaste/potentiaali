@@ -2,12 +2,12 @@
   <div id="app">
     <h1>Potentiaali - Vue.js</h1>
 
-    <SkillSelection v-if="!phase" v-on:incrementPhase="incrementPhase" />
+    <SkillSelection v-if="!phase" @incrementPhase="incrementPhase" />
     <Questionnaire
       v-else
       :phase="phase"
       :questions="questions"
-      v-on:incrementPhase="incrementPhase"
+      @incrementPhase="incrementPhase"
     />
   </div>
 </template>
