@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import * as config from './config';
+
 import SkillSelection from './components/SkillSelection';
 import Questionnaire from './components/Questionnaire';
 
@@ -24,7 +26,7 @@ export default {
     };
   },
   created() {
-    fetch('http://localhost:3000')
+    fetch(config.BASE_URL)
       .then(response => response.json())
       .then((data) => { this.questions = data; });
   },
@@ -37,7 +39,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 #app {
   display: flex;
   flex-direction: column;

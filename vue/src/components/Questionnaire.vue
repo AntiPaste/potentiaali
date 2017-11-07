@@ -13,13 +13,16 @@
 </template>
 
 <script>
+import * as config from '../config';
+
 export default {
   name: 'Questionnaire',
   props: ['phase', 'questions'],
   methods: {
     selectChoice(choice) {
-      const base = 'http://localhost:3000';
-      fetch(`${base}/answer?question=${this.question.id}&choice=${choice}`);
+      const { id } = this.question;
+
+      fetch(`${config.BASE_URL}/answer?question=${id}&choice=${choice}`);
       this.$emit('incrementPhase');
     },
   },
@@ -31,7 +34,7 @@ export default {
 };
 </script>
 
-<style type="sass" scoped>
+<style lang="scss" scoped>
 .choice-button {
   margin: 10px;
   padding: 10px;

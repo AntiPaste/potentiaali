@@ -1,5 +1,5 @@
 <template>
-  <div class="skill-button" @click="onClick">
+  <div class="skill-button">
     <slot />
   </div>
 </template>
@@ -7,11 +7,10 @@
 <script>
 export default {
   name: 'SkillSelection',
-  props: ['onClick'],
 };
 </script>
 
-<style type="sass" scoped>
+<style lang="scss" scoped>
 .skill-button {
   margin: 10px;
   cursor: pointer;
