@@ -44,7 +44,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 #app {
   display: flex;
   flex-direction: column;

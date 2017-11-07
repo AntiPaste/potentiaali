@@ -1,6 +1,10 @@
 <template>
   <div class="skill-selection">
-    <SkillButton v-for="(skill, index)" @click="chooseSkill(index)">
+    <SkillButton
+      :key="index"
+      v-for="(skill, index) in skills"
+      @click="chooseSkill(index)"
+    >
       {{ skill }}
     </SkillButton>
   </div>
@@ -38,7 +42,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .skill-selection {
   display: flex;
   flex-direction: row;

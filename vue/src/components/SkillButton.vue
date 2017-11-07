@@ -10,7 +10,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .skill-button {
   margin: 10px;
   cursor: pointer;
