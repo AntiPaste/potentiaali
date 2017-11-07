@@ -17,7 +17,10 @@ import * as config from '../config';
 
 export default {
   name: 'Questionnaire',
-  props: ['phase', 'questions'],
+  props: {
+    phase: Number,
+    questions: Array,
+  },
   methods: {
     selectChoice(choice) {
       const { id } = this.question;

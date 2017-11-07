@@ -3,7 +3,12 @@
     <h1>Potentiaali - Vue.js</h1>
 
     <SkillSelection v-if="!phase" v-on:incrementPhase="incrementPhase" />
-    <Questionnaire v-if="phase" :phase="phase" :questions="questions" v-on:incrementPhase="incrementPhase" />
+    <Questionnaire
+      v-if="phase"
+      :phase="phase"
+      :questions="questions"
+      v-on:incrementPhase="incrementPhase"
+    />
   </div>
 </template>
 
